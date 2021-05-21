@@ -2,3 +2,133 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+
+.header {
+    min-height: 768px;
+    position: relative;
+    &__inner{
+        max-width: 1366px;
+        position: relative;
+    }
+    &__top-block{
+        margin: 40px 83px 0 83px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+    }
+    &__menu-button{
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border: none;                       
+    }
+    &__logo{
+        width: 48px;
+        height: 48px;
+    }
+    &__banner{
+        position: absolute;
+        top: 100px;
+        right: 24px;
+    }
+    &__info{
+        margin-top: 100px;
+        margin-left: 212px;
+    }
+    &__title{
+        width: 510px;
+        font: 900 64px/74px "Galien";
+        letter-spacing: 0.04em;
+        color: $text-color;
+    }
+    &__text{
+        width: 425px;
+        margin-top: 32px;
+    }
+    &__button{
+        margin-top: 70px;
+    }
+
+}
+
+.header::after {
+    content: "";
+    background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;   
+}
+
+.text{
+    @extend %text_style;
+    color: $text-color;
+
+}
+
+.button{
+    width: 220px;
+    height: 56px;
+    background: $button-color;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    font: 16px/26px "Gilroy-Regular";
+    letter-spacing: 0.04em;
+    
+}
+
+.button__link{
+    color: #FFFFFF;
+}
+
+.footer{
+    &__inner{
+        min-height: 869px;
+        width: 1270px;
+        background: #316099;
+        border-radius: 0px 200px 0px 0px;
+    }
+    &__top-block{
+        display: flex;
+        justify-content: space-between;
+        width: 1073px;
+        min-height: 390px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    &__title{
+        width: 317px;
+        @extend %title_big;
+        margin-top: 90px;
+        margin-left: 213px;
+        color: white;
+    }
+    &__text{
+        width: 460px;
+        @extend %text_style;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 32px;
+        margin-left: 213px;
+    }
+    &__button{
+        margin-top: 165px;
+    }
+    &__info{
+        display: flex;
+        margin-top: 97px;
+        margin-left: 214px;
+    }
+    &__copyright{
+        margin-top: 64px;
+        margin-left: 214px;
+    }
+    &__menu{
+        margin-right: 77px;
+    }
+    &__contacts{
+        margin-right: 100px;
+    }
+}
+

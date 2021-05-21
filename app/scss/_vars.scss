@@ -1,0 +1,18 @@
+$button-color: #5A98D0;
+$text-color: #1F3F68;
+
+%text_style{
+    font: 16px/26px "Gilroy-Regular";
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
+
+%title_big{
+    font: 36px/46px "Gilroy-Semibold";
+    letter-spacing: 0.05em;
+}
+
+%title_small{
+    font: 20px/30px "Gilroy-Semibold";
+    letter-spacing: 0.05em;
+}

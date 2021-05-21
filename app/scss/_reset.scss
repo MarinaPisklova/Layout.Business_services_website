@@ -37,7 +37,7 @@ ul[class] {
 }
 
 img {
-    max-width: 100%;
+    //max-width: 100%;
     display: block;
 }
 
@@ -46,4 +46,10 @@ button,
 textarea,
 select {
     font: inherit;
+    border: 0px;
+}
+
+a{
+    display: block;
+    text-decoration: none;
 }
