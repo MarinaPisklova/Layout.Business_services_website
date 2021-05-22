@@ -93,7 +93,7 @@
     }
     &__top-block{
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         width: 1073px;
         min-height: 390px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -114,6 +114,7 @@
     }
     &__button{
         margin-top: 165px;
+        margin-left: 180px;
     }
     &__info{
         display: flex;
@@ -123,6 +124,8 @@
     &__copyright{
         margin-top: 64px;
         margin-left: 214px;
+        @extend %text_style;
+        color: rgba(255, 255, 255, 0.4);
     }
     &__menu{
         margin-right: 77px;
@@ -130,5 +133,193 @@
     &__contacts{
         margin-right: 100px;
     }
+    &__big-logo{
+        margin-bottom: 33px;
+    }
+}
+
+.container--blueback{
+    background-color: $button-color;
+}
+
+.big-logo{
+    display: flex;
+    &__name{
+        margin-left: 15px;
+        font: 28px/46px "Gilroy-Semibold";
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+    }
+}
+
+.big-logo::before{
+    content: url("../images/big-logo.svg");
+}
+
+.list{
+    &__item{
+        display: flex;
+        width: 264px;
+        @extend %text_style;
+        color: white;
+        margin-bottom: 16px;
+    }
+    &__text{
+        margin-left: 16px;
+        margin-bottom: 8px;
+    }
+    &__marker{
+        @extend %text_style;
+        font-family: "Gilroy-Semibold";
+        opacity: 1;
+    }
+    &__link{
+        color: white;
+    }
+}
+
+.menu{
+    width: 163px;
+    &__title{
+        @extend %title_small;
+        color: white;
+        margin-bottom: 32px;
+    }
+}
+
+.top{
+    &__inner{
+        width: 940px;
+        max-height: 1262px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 180px;
+        margin-bottom: 112px;
+
+    }
+    &__title{
+        @extend %title_big;
+        color: #316099;
+        width: 360px;
+        height: 138px;
+        margin-bottom: 158px;
+    }
+    &__article{
+        margin-bottom: 100px;
+        margin-left: 80px;
+    }
+}
+
+
+
+.article{
+    width: 380px;
+    height: 525px;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 48px;
+    position: relative;
+    &__img1{
+        position: absolute;
+        width: 182px;
+        height: 132px;
+        left: 74px;
+        top: 48px;
+    }
+    &__img3{
+        position: absolute;
+        width: 156px;
+        height: 131px;
+        left: 100px;
+        top: 49px;
+    }
+    &__img2{
+        position: absolute;
+        width: 224px;
+        height: 197px;
+        left: 78px;
+        top: -22px;
+    }
+    &__title{
+        @extend %title_small;
+        color: $text-color;
+        padding-top: 236px;
+        margin-bottom: 16px;
+    }
+    &__text{
+        color: $text-color;
+        @extend %text_style;
+        margin-bottom: 32px;
+    }
+
+    &__link{
+        font: 14px/30px "Gilroy-Semibold";
+        letter-spacing: 0.05em;
+        color: $button-color;
+        display: flex;
+        align-items: center;    
+    }
+}
+
+.article__link::after{
+    width: 24px;
+    height: 24px;
+    content: url(../images/arrow.svg);
+    margin-left: 24px;
+}
+
+.clients{
+    width: 1366px;
+    min-height: 680px;
+    background: $button-color;
+    border-radius: 200px 0px 0px 0px;
+
+    &__info{
+        padding-top: 96px;
+        margin-left: 213px;
+        display: flex;
+        margin-bottom: 111px;
+        
+    }
+    &__title{
+        width: 225px;
+        @extend %title_big;
+        color: white;
+        margin-right: 97px;
+    }
+    &__text{
+        width: 540px;
+        @extend %text_style;
+        color: #FFFFFF;
+    }
+    &__list{
+        width: 940px;
+        height: 256px;
+        margin-left: 213px;
+    }
+    &__item{
+        width: 235px;
+        height: 128px;
+        font: 20px/46px "Gilroy-Semibold";
+        letter-spacing: 0.02em;
+        color: #F2F2F2;
+        text-align: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    &__link{
+        color: #F2F2F2;
+        text-align: center;
+    }
+    &__item--bottomborder{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    &__lastItem{
+        border-right: none;
+    }
+
 }
 
