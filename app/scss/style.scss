@@ -3,40 +3,32 @@
 @import 'reset';
 @import 'global';
 
+
 .header {
-    min-height: 768px;
-    position: relative;
-    &__inner{
-        max-width: 1366px;
-        position: relative;
-    }
     &__top-block{
-        margin: 40px 83px 0 83px;
+        margin: 0px 83px;
+        padding-top: 40px;
         display: flex;
         align-content: center;
         justify-content: space-between;
+        align-items: center;
     }
     &__menu-button{
         width: 32px;
         height: 32px;
         background-color: transparent;
-        border: none;                       
+        border: none; 
     }
     &__logo{
         width: 48px;
         height: 48px;
-    }
-    &__banner{
-        position: absolute;
-        top: 100px;
-        right: 24px;
+       background-color: transparent;
     }
     &__info{
-        margin-top: 100px;
-        margin-left: 212px;
+        margin: 100px 212px 0px;
+        padding-bottom: 190px;
     }
     &__title{
-        width: 510px;
         font: 900 64px/74px "Galien";
         letter-spacing: 0.04em;
         color: $text-color;
@@ -48,13 +40,26 @@
     &__button{
         margin-top: 70px;
     }
-
 }
 
-.header::after {
+.container--background{
+    position: relative;
+}
+.container--background::before {
     content: "";
     background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
     opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;   
+}
+
+.container--background::after {
+    content: "";
+    background: url(../images/banner.svg) bottom right no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -66,7 +71,6 @@
 .text{
     @extend %text_style;
     color: $text-color;
-
 }
 
 .button{
@@ -76,8 +80,7 @@
     border-radius: 10px;
     box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
     font: 16px/26px "Gilroy-Regular";
-    letter-spacing: 0.04em;
-    
+    letter-spacing: 0.04em;  
 }
 
 .button__link{
@@ -87,22 +90,23 @@
 .footer{
     &__inner{
         min-height: 869px;
-        width: 1270px;
+        max-width: 1270px;
         background: #316099;
         border-radius: 0px 200px 0px 0px;
     }
     &__top-block{
         display: flex;
-        //justify-content: space-between;
-        width: 1073px;
+        justify-content: space-between;
         min-height: 390px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding-left: 213px;
+        margin-right: 197px;
+        padding-top: 90px;
+        padding-bottom: 50px;
     }
     &__title{
         width: 317px;
         @extend %title_big;
-        margin-top: 90px;
-        margin-left: 213px;
         color: white;
     }
     &__text{
@@ -110,28 +114,22 @@
         @extend %text_style;
         color: rgba(255, 255, 255, 0.6);
         margin-top: 32px;
-        margin-left: 213px;
     }
     &__button{
-        margin-top: 165px;
-        margin-left: 180px;
+        margin: 75px 20px 0px;
     }
     &__info{
         display: flex;
+        justify-content: space-between;
+        margin-left: 213px;
         margin-top: 97px;
-        margin-left: 214px;
+        margin-right: 197px;
+        flex-wrap: wrap;
     }
     &__copyright{
-        margin-top: 64px;
-        margin-left: 214px;
+        margin: 64px 214px 0px;
         @extend %text_style;
         color: rgba(255, 255, 255, 0.4);
-    }
-    &__menu{
-        margin-right: 77px;
-    }
-    &__contacts{
-        margin-right: 100px;
     }
     &__big-logo{
         margin-bottom: 33px;
@@ -139,6 +137,7 @@
 }
 
 .container--blueback{
+    max-width: 1366px;
     background-color: $button-color;
 }
 
@@ -175,7 +174,8 @@
     }
     &__link{
         color: white;
-    }
+        display: inline-block
+       }
 }
 
 .menu{
@@ -189,17 +189,19 @@
 
 .top{
     &__inner{
-        width: 940px;
-        max-height: 1262px;
+        max-width: 940px;
+        //max-height: 1262px;
         display: flex;
-        flex-direction: column;
+        //flex-direction: column;
+        justify-content: space-between;
         flex-wrap: wrap;
-        margin: 0 auto;
-        margin-top: 180px;
-        margin-bottom: 112px;
-
+        margin: 180px auto 112px;
+        background-color: gray;
+        //align-items: center;
     }
     &__title{
+        //flex-basis: 360px;
+        //flex-grow: 0;
         @extend %title_big;
         color: #316099;
         width: 360px;
@@ -212,6 +214,9 @@
     }
 }
 
+.top:nth-child(3) {
+    transform: translateY(378px);
+}
 
 
 .article{
@@ -265,6 +270,9 @@
     }
 }
 
+
+
+
 .article__link::after{
     width: 24px;
     height: 24px;
@@ -273,23 +281,26 @@
 }
 
 .clients{
-    width: 1366px;
-    min-height: 680px;
-    background: $button-color;
-    border-radius: 200px 0px 0px 0px;
-
+    &__inner{
+        min-height: 680px;
+        background: $button-color;
+        border-radius: 200px 0px 0px 0px;
+    }
     &__info{
         padding-top: 96px;
         margin-left: 213px;
+        margin-right: 293px;
         display: flex;
+        justify-content: space-between;
         margin-bottom: 111px;
         
     }
     &__title{
+        flex-shrink: 0;
         width: 225px;
         @extend %title_big;
         color: white;
-        margin-right: 97px;
+        margin-right: 50px;
     }
     &__text{
         width: 540px;
@@ -297,14 +308,18 @@
         color: #FFFFFF;
     }
     &__list{
-        width: 940px;
-        height: 256px;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        max-width: 940px;
         margin-left: 213px;
+        margin-right: 213px;
+        padding-bottom: 125px;
     }
     &__item{
-        width: 235px;
-        height: 128px;
-        font: 20px/46px "Gilroy-Semibold";
+        flex: 1 1 235px;
+        display: block;
+        font: 20px/128px "Gilroy-Semibold";
         letter-spacing: 0.02em;
         color: #F2F2F2;
         text-align: center;
@@ -323,3 +338,4 @@
 
 }
 
+@import 'media';

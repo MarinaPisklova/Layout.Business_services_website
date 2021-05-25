@@ -1,0 +1,168 @@
+@media (max-width: 1245px){
+    .header{
+        &__inner{
+            min-height: 850px;
+        }
+    }
+}
+
+@media (max-width: 1120px){
+    .header{
+        &__inner{
+            min-height: 970px;
+        }
+    }
+}
+
+@media (max-width: 1080px){
+    .footer{
+        &__top-block{
+            display: block;
+            text-align: center;
+            padding-left: 150px;
+        }
+        &__title{
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__text{
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__menu{
+            margin: 0 30px;
+        }
+        &__info{
+            margin-left: 150px;
+        }
+        &__copyright{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (max-width: 1060px){
+    .footer{
+        &__info{
+            margin: 97px auto;
+            padding: 0px 50px;
+        }
+    }
+}
+
+@media (max-width: 940px){
+    .header{
+        &__inner{
+            min-height: 1060px;
+        }
+        &__title {
+            text-align: center;
+            font: 900 50px/60px "Galien";
+            margin: auto;
+        }
+        &__text{
+            width: 100%;
+            text-align: center;
+        }
+        &__info{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .footer{
+        &__top-block{
+            margin: auto;
+            padding-left: 50px;
+            margin-right: 50px;
+        }
+    }
+}
+
+
+@media (max-width: 820px){
+    .footer{
+        &__contacts{
+            width: 100%;
+            margin-bottom: 50px;
+
+        }
+        &__info{
+            justify-content: center;
+        }
+        &__big-logo{
+            justify-content: center;
+        }
+        &__menu{
+            width: 50%;
+            margin: 16px auto 0px;
+            text-align: center;
+        }
+
+    }
+    .list__item{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+
+}
+
+
+
+
+@media (max-width: 800px){
+    .header{
+        &__inner{
+            min-height: fit-content;
+        }
+        &__info{
+            padding-bottom: 50px;
+        }
+        &__title{
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__text{
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__button{
+            display: block;
+            margin: 70px auto;
+        }
+    }
+    .container--background{
+        position: relative;
+    }
+    .container--background::after {
+        padding-top: 0;
+        display: none;
+    }
+    .container--background::before {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 680px){
+    .header{
+        &__title{
+            font: 900 36px/44px "Galien";
+        }
+        &__text{
+            padding: 0px 15px;
+        }
+    }
+}
+
