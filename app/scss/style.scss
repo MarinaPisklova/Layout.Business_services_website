@@ -175,7 +175,7 @@
     &__link{
         color: white;
         display: inline-block
-       }
+    }
 }
 
 .menu{
@@ -307,23 +307,17 @@
         color: #FFFFFF;
     }
     &__list{
-        display: flex;
-        align-content: center;
-        flex-wrap: wrap;
-        max-width: 940px;
         margin-left: auto;
         margin-right: auto;
-        
         padding-bottom: 125px;
     }
     &__item{
-        flex: 1 1 235px;
-        display: block;
+        width: 235px;
         font: 20px/128px "Gilroy-Semibold";
         letter-spacing: 0.02em;
         color: #F2F2F2;
         text-align: center;
-        border-right: 1px solid rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.6);
     }
     &__link{
         color: #F2F2F2;
@@ -336,6 +330,11 @@
         border-right: none;
     }
 
+    &__table{
+        border-collapse: collapse; /* Убираем двойные линии между ячейками */
+        border: 2px solid $button-color;/* Прячем рамку вокруг таблицы */
+        margin: 0px auto;
+    }
 }
 
 @import 'media';
