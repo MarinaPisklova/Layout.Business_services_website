@@ -272,6 +272,65 @@
     }
 }
 
+@keyframes move {
+    from{
+        top: 50px;
+        animation-timing-function: linear;
+    }
+    25%{
+        top: 70px;
+        animation-timing-function: linear;
+    }
+    75%{
+        top: 30px;
+        animation-timing-function: linear;
+    }
+    to{
+        top: 50px;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes move2{
+    from{
+        top: -22px;
+        animation-timing-function: linear;
+    }
+    25%{
+        top: -2px;
+        animation-timing-function: linear;
+    }
+    75%{
+        top: -42px;
+        animation-timing-function: linear;
+    }
+    to{
+        top: -22px;
+        animation-timing-function: linear;
+    }
+}
+
+.article:hover{
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.5);
+    transition: all ease-in-out 0.2s;
+
+    .article__img1{
+        animation-name: move;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+    .article__img2{
+        animation-name: move2;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+    .article__img3{
+        animation-name: move;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+}
+
 .article__link::after{
     width: 24px;
     height: 24px;
